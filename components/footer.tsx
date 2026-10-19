@@ -1,0 +1,120 @@
+"use client";
+
+import Link from "next/link";
+import { Magnetic } from "./magnetic";
+import { ArrowUpRight } from "./ui";
+import { NAV_LINKS, VERTICALS, COMPANY, DISCLAIMER } from "@/lib/content";
+
+const QUICK = NAV_LINKS.slice(1, 6);
+const MORE = NAV_LINKS.slice(6);
+
+export default function Footer() {
+  const toTop = () => {
+    window.__lenis?.scrollTo(0, { duration: 1.4 });
+  };
+
+  return (
+    <footer className="relative border-t border-ink/10 bg-cream px-6 pt-20 text-ink md:px-10">
+      <div className="mx-auto grid max-w-screen-xl gap-14 md:grid-cols-12">
+        <div className="md:col-span-6">
+          <p className="font-mono text-[10px] uppercase tracking-[0.26em] text-ink/50">
+            ( Triven Biomedicals )
+          </p>
+          <p className="mt-6 max-w-md font-display text-3xl leading-[1.05] md:text-4xl">
+            Trade. Services. Brands.{" "}
+            <span className="italic text-moss">One connected company.</span>
+          </p>
+          <div className="mt-8">
+            <Magnetic strength={0.2}>
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-3 rounded-full bg-ink px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-paper transition-colors duration-300 hover:bg-acid hover:text-ink"
+              >
+                Partner with us
+                <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </Link>
+            </Magnetic>
+          </div>
+        </div>
+
+        <div className="grid gap-10 sm:grid-cols-3 md:col-span-6">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.26em] text-ink/40">
+              Company
+            </p>
+            <ul className="mt-5 space-y-3">
+              {QUICK.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="draw text-sm text-ink/70 transition-colors hover:text-moss"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.26em] text-ink/40">
+              Verticals
+            </p>
+            <ul className="mt-5 space-y-3">
+              {VERTICALS.map((v) => (
+                <li key={v.href}>
+                  <Link
+                    href={v.href}
+                    className="draw text-sm text-ink/70 transition-colors hover:text-moss"
+                  >
+                    {v.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.26em] text-ink/40">
+              More
+            </p>
+            <ul className="mt-5 space-y-3">
+              {MORE.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="draw text-sm text-ink/70 transition-colors hover:text-moss"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-16 max-w-screen-xl border-t border-ink/10 py-8">
+        <div className="flex flex-wrap items-start justify-between gap-6">
+          <p className="max-w-2xl font-mono text-[10px] leading-relaxed tracking-[0.08em] text-ink/40">
+            {DISCLAIMER}
+          </p>
+          <button
+            onClick={toTop}
+            className="group flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 transition-colors duration-300 hover:border-acid hover:bg-acid hover:text-ink"
+            aria-label="Back to top"
+          >
+            <ArrowUpRight className="h-4 w-4 -rotate-90 transition-transform duration-300 group-hover:-translate-y-0.5" />
+          </button>
+        </div>
+        <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-ink/40">
+          © 2026 {COMPANY} · All rights reserved
+        </p>
+      </div>
+
+      <div aria-hidden className="overflow-hidden px-1 pb-4">
+        <div className="select-none text-center font-display text-[19vw] leading-[0.78] tracking-tight text-ink/[0.07]">
+          TRIVEN
+        </div>
+      </div>
+    </footer>
+  );
+}

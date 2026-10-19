@@ -1,69 +1,106 @@
-import Image from "next/image";
+import Hero from "@/components/hero";
+import { Marquee } from "@/components/marquee";
+import { SectionHead, Button } from "@/components/ui";
+import { ScrollFill, FadeUp } from "@/components/reveal";
+import { ListRows } from "@/components/list-rows";
+import { SpotlightCard } from "@/components/spotlight";
+import ClosingCTA from "@/components/closing-cta";
+import { PILLARS, VERTICALS } from "@/lib/content";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Hero />
+
+      <section className="bg-paper px-6 py-24 text-ink md:px-10 md:py-36">
+        <div className="mx-auto max-w-screen-xl">
+          <SectionHead label="01 — Capabilities" note="Four pillars" />
+          <FadeUp className="mt-12 max-w-3xl">
+            <h2 className="font-display text-[clamp(2.2rem,4.6vw,4.5rem)] leading-[1.02]">
+              One partner across the supply chain.
+            </h2>
+          </FadeUp>
+          <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+            {PILLARS.map((p, i) => (
+              <FadeUp key={p.n} delay={i * 0.08} className="h-full">
+                <SpotlightCard className="group flex h-full min-h-[300px] flex-col justify-between border border-ink/10 bg-cream p-8">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[11px] tracking-[0.22em] text-ink/50">
+                      ( {p.n} )
+                    </span>
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      className="h-4 w-4 text-ink/40 transition-all duration-300 group-hover:text-ink"
+                      aria-hidden
+                    >
+                      <path d="M3 13 13 3M5.5 3H13v7.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-3xl leading-none">{p.title}</h3>
+                    <p className="mt-4 text-sm leading-relaxed text-ink/60">{p.line}</p>
+                    <a
+                      href={p.href}
+                      className="mt-8 inline-block font-mono text-[10px] uppercase tracking-[0.22em] text-ink/50 underline decoration-ink/20 underline-offset-4 transition-colors group-hover:text-ink"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </SpotlightCard>
+              </FadeUp>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+      </section>
+
+      <section className="relative bg-cream px-6 py-24 text-ink md:px-10 md:py-36">
+        <div className="mx-auto max-w-screen-xl">
+          <SectionHead label="02 — The idea" note="Connected by design" />
+          <div className="mt-16">
+            <ScrollFill
+              as="p"
+              text="Trade. Services. Brands. One connected company — built on pharmaceutical distribution and long-standing supplier relationships, combining product trading with fee-based services."
+              className="max-w-5xl font-display text-[clamp(1.7rem,3.8vw,3.4rem)] leading-[1.18]"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <FadeUp className="mt-12 max-w-xl text-base leading-relaxed text-ink/65">
+              <p>
+                So our partners get one reliable point of contact for supply,
+                sourcing and market access — and a teammate who grows through
+                adjacent capabilities and validated demand, rather than doing
+                everything.
+              </p>
+            </FadeUp>
+            <FadeUp delay={0.15} className="mt-10">
+              <Button href="/about" variant="dark">
+                About Triven
+              </Button>
+            </FadeUp>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <Marquee
+        items={["Trade", "Services", "Brands", "Distribution", "Sourcing", "Exports"]}
+      />
+
+      <section className="bg-paper px-6 pb-28 text-ink md:px-10 md:pb-40">
+        <div className="mx-auto max-w-screen-xl pt-24 md:pt-32">
+          <SectionHead label="03 — What we do" note="Six verticals" />
+          <FadeUp className="mt-12 flex flex-wrap items-end justify-between gap-6">
+            <h2 className="max-w-2xl font-display text-[clamp(2.2rem,4.6vw,4.5rem)] leading-[1.02]">
+              Pick a lane. <span className="italic text-moss">We take it from there.</span>
+            </h2>
+          </FadeUp>
+          <div className="mt-16">
+            <ListRows items={VERTICALS} />
+          </div>
+        </div>
+      </section>
+
+      <ClosingCTA />
+    </>
   );
 }
