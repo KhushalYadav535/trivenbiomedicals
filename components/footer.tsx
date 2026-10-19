@@ -110,9 +110,16 @@ export default function Footer() {
         </p>
       </div>
 
-      <div aria-hidden className="overflow-hidden px-1 pb-4">
+      <div aria-hidden data-cursor className="overflow-hidden px-1 pb-4">
         <div className="select-none text-center font-display text-[19vw] leading-[0.78] tracking-tight text-ink/[0.07]">
-          TRIVEN
+          {"TRIVEN".split("").map((ch, i) => (
+            <span
+              key={i}
+              className="inline-block transition-all duration-300 hover:-translate-y-3 hover:italic hover:text-moss"
+            >
+              {ch}
+            </span>
+          ))}
         </div>
       </div>
     </footer>

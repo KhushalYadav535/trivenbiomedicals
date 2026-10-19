@@ -8,7 +8,7 @@ export function OrbitBadge({
   className?: string;
 }) {
   return (
-    <div className={`group relative h-32 w-32 ${className}`} data-cursor>
+    <div className={`group relative h-32 w-32 ${className}`} data-cursor-label="Explore">
       <svg
         viewBox="0 0 100 100"
         className="animate-spin-slow h-full w-full text-ink/60"

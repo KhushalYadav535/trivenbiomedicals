@@ -13,6 +13,7 @@ export function NextPage({
   return (
     <Link
       href={href}
+      data-cursor-label="Next"
       className="group relative block overflow-hidden bg-acid px-6 py-20 text-ink transition-colors duration-500 hover:bg-ink hover:text-paper md:px-10 md:py-28"
     >
       <div className="mx-auto flex max-w-screen-xl items-end justify-between gap-8">

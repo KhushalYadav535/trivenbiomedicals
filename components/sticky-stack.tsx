@@ -39,6 +39,7 @@ export function StickyStack() {
               <div className="mt-12 flex items-end justify-between gap-6 border-t border-ink/10 pt-8">
                 <a
                   href={item.href}
+                  data-cursor-label="Open"
                   className="group flex h-12 items-center gap-3 rounded-full bg-ink px-6 font-mono text-[10px] uppercase tracking-[0.2em] text-paper transition-colors duration-300 hover:bg-acid hover:text-ink"
                 >
                   {item.cta}

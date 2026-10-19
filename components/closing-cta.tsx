@@ -1,19 +1,14 @@
 "use client";
 
-import ShaderCanvas from "./shader-canvas";
+import Plexus from "./plexus";
 import { RevealChars, FadeUp } from "./reveal";
 import { Button } from "./ui";
 
 export default function ClosingCTA() {
   return (
     <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-paper text-ink">
-      <ShaderCanvas
-        className="absolute inset-0"
-        palette={["#f1ede0", "#b7cdb4", "#e7f281"]}
-        speed={0.8}
-        vignette={0.1}
-      />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-paper/40 via-transparent to-paper/70" />
+      <Plexus className="absolute inset-0 h-full w-full" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-paper/40 via-transparent to-paper/50" />
       <div className="relative flex w-full flex-col items-center px-6 py-28 text-center md:px-10">
         <RevealChars
           as="p"

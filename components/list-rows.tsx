@@ -10,6 +10,7 @@ export function ListRows({ items }: { items: Row[] }) {
         <Link
           key={item.n}
           href={item.href}
+          data-cursor-label="View"
           className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-ink/10 px-1 py-7 transition-colors duration-300 hover:bg-ink hover:text-paper md:gap-10 md:px-4 md:py-9"
         >
           <span className="font-mono text-[11px] tracking-[0.2em] text-moss transition-colors duration-300 group-hover:text-acid">

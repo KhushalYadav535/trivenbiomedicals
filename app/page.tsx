@@ -1,10 +1,10 @@
 import Hero from "@/components/hero";
-import { Marquee } from "@/components/marquee";
 import { SectionHead, Button } from "@/components/ui";
 import { ScrollFill, FadeUp } from "@/components/reveal";
 import { ListRows } from "@/components/list-rows";
 import { SpotlightCard } from "@/components/spotlight";
 import ClosingCTA from "@/components/closing-cta";
+import KineticMarquee from "@/components/kinetic-marquee";
 import { PILLARS, VERTICALS } from "@/lib/content";
 
 export default function Home() {
@@ -82,8 +82,10 @@ export default function Home() {
         </div>
       </section>
 
-      <Marquee
+      <KineticMarquee
+        className="my-24 md:my-32"
         items={["Trade", "Services", "Brands", "Distribution", "Sourcing", "Exports"]}
+        alt={["Evidence-first", "Supplier Networks", "Market Access", "Compliance"]}
       />
 
       <section className="bg-paper px-6 pb-28 text-ink md:px-10 md:pb-40">

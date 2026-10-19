@@ -5,6 +5,7 @@ import { SectionHead } from "@/components/ui";
 import { FadeUp } from "@/components/reveal";
 import { CONTACT_DETAILS, INTERESTS } from "@/lib/content";
 import { ContactForm } from "@/components/contact-form";
+import Plexus from "@/components/plexus";
 
 export const metadata: Metadata = {
   title: "Contact — Partner With Us",
@@ -39,6 +40,16 @@ export default function ContactPage() {
 
           <FadeUp delay={0.15}>
             <div className="sticky top-28 space-y-10">
+              <div className="relative h-44 overflow-hidden rounded-3xl border border-ink/10 bg-cream">
+                <Plexus className="absolute inset-0 h-full w-full" />
+                <span className="absolute left-5 top-5 font-mono text-[9px] uppercase tracking-[0.24em] text-ink/50">
+                  ( Network — live )
+                </span>
+                <span className="absolute bottom-5 left-5 flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.24em] text-moss">
+                  <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-moss" />
+                  Suppliers across India
+                </span>
+              </div>
               <div>
                 <SectionHead label="Company details" />
                 <div className="mt-8">
