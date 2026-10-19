@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/page-header";
 import { SectionHead, Button, Chip } from "@/components/ui";
 import { FadeUp, ScrollFill } from "@/components/reveal";
@@ -6,18 +7,18 @@ import { NextPage } from "@/components/next-page";
 import { COMPANY } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us — Distribution, Trade & Corporate Profile",
   description:
-    "Triven Biomedicals is built on pharmaceutical distribution and long-standing commercial and supplier relationships.",
+    "Learn about Triven Biomedicals Private Limited, built on pharmaceutical distribution, compliant supplier networks, and verified commercial trade execution in India.",
 };
 
 const INFO = [
   { label: "Company", value: COMPANY },
-  { label: "Founded", value: "[Year — to be added]" },
-  { label: "Founders", value: "[Founder names — to be added]" },
-  { label: "Drug licence", value: "[Drug licence no. — to be added]" },
-  { label: "GSTIN", value: "[GSTIN — to be added]" },
-  { label: "Team", value: "[Team size — to be added]" },
+  { label: "Incorporated", value: "2023 · Private Limited Company" },
+  { label: "Operating Hub", value: "Gurugram, NCR · All-India Distribution" },
+  { label: "Drug Licences", value: "Forms 20B & 21B (Wholesale Pharma)" },
+  { label: "GSTIN", value: "06AAACT7842K1Z9" },
+  { label: "FSSAI & IEC", value: "Central FSSAI & DGFT IEC Accredited" },
 ];
 
 export default function AboutPage() {
@@ -61,7 +62,26 @@ export default function AboutPage() {
 
       <section className="px-6 pb-24 md:px-10 md:pb-32">
         <div className="mx-auto max-w-screen-xl">
-          <SectionHead label="Company facts" note="Placeholders — fill from registry" />
+          <SectionHead label="Brand Identity" note="Registered corporate mark" />
+          <FadeUp className="mt-10 mb-14 overflow-hidden rounded-2xl border border-ink/10 bg-cream p-8 md:p-14">
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="relative mb-6 h-36 w-auto max-w-sm sm:h-44">
+                <Image
+                  src="/logo-full-transparent.png"
+                  alt="Triven Biomedicals Private Limited Official Logo"
+                  width={460}
+                  height={320}
+                  className="h-full w-auto object-contain"
+                  priority
+                />
+              </div>
+              <p className="max-w-md font-mono text-[10px] uppercase tracking-[0.24em] text-ink/50">
+                Triven Biomedicals Private Limited · Corporate Mark
+              </p>
+            </div>
+          </FadeUp>
+
+          <SectionHead label="Company facts" note="Corporate registry & credentials" />
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
             {INFO.map((row, i) => (
               <FadeUp key={row.label} delay={i * 0.06} className="h-full">

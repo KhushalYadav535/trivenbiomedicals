@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/hero";
 import { SectionHead, Button } from "@/components/ui";
 import { ScrollFill, FadeUp } from "@/components/reveal";
@@ -5,7 +6,13 @@ import { ListRows } from "@/components/list-rows";
 import { SpotlightCard } from "@/components/spotlight";
 import ClosingCTA from "@/components/closing-cta";
 import KineticMarquee from "@/components/kinetic-marquee";
-import { PILLARS, VERTICALS } from "@/lib/content";
+import { PILLARS, VERTICALS, COMPANY, SUBLINE } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "Triven Biomedicals — Connecting Healthcare and Trade, Reliably",
+  description:
+    "Triven Biomedicals Private Limited is an Indian distribution, sourcing and trade partner for pharmaceuticals, hospital consumables, FMCG, and institutional supply chains.",
+};
 
 export default function Home() {
   return (

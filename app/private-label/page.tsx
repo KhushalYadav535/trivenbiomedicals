@@ -5,9 +5,9 @@ import { FadeUp } from "@/components/reveal";
 import { NextPage } from "@/components/next-page";
 
 export const metadata: Metadata = {
-  title: "Private Label & Contract Manufacturing",
+  title: "Private Label & Contract Manufacturing — OEM Healthcare & FMCG",
   description:
-    "Build your brand with the right manufacturing partner — own-brand, client brands and OEM sourcing. Programme in rollout.",
+    "End-to-end private-label brand incubation, GMP contract manufacturing partnerships, batch formulation, and OEM sourcing across healthcare and consumer categories.",
 };
 
 const OFFERS = [

@@ -6,9 +6,9 @@ import { NextPage } from "@/components/next-page";
 import { SOURCING_SERVICES, SOURCING_MODELS } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Sourcing & Procurement",
+  title: "Sourcing & Procurement Services — Supplier Discovery & Negotiation",
   description:
-    "Find the right supplier without the guesswork — discovery, verification, negotiation and PO coordination.",
+    "Technical supplier discovery, compliance checks, price negotiations, and structured purchase order fulfillment across India's premier manufacturing corridors.",
 };
 
 export default function SourcingPage() {

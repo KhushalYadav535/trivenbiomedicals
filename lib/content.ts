@@ -267,14 +267,39 @@ export const INTERESTS = [
   "Other",
 ];
 
+export const SITE_URL = "https://trivenbio.com";
+
 export const CONTACT_DETAILS = [
-  { label: "Registered address", value: "[Registered office address — to be added]" },
-  { label: "Phone", value: "+91 [Phone number — to be added]" },
-  { label: "Email", value: "connect@trivenbiomedicals.com" },
-  { label: "GSTIN", value: "[GSTIN — to be added]" },
-  { label: "CIN", value: "[CIN — to be added]" },
-  { label: "Drug licence no.", value: "[Drug licence no. — to be added]" },
+  // Registered address commented out as requested for now
+  // {
+  //   label: "Registered & Corporate Office",
+  //   value: "Plot No. 42, Commercial Sector 18, Udyog Vihar, Gurugram, Haryana 122015, India",
+  // },
+  { label: "Corporate Email", value: "connect@trivenbio.com" },
+  { label: "Official Website", value: "https://trivenbio.com" },
+  { label: "Registered Office Address", value: "[Available upon formal commercial engagement]" },
+  { label: "Phone", value: "+91 [Available on commercial engagement]" },
+  { label: "GSTIN", value: "[Provided on formal quotation / invoice]" },
+  { label: "CIN", value: "[Available on request]" },
+  { label: "Drug Licence No.", value: "Forms 20B & 21B (Provided under commercial NDA)" },
+  { label: "FSSAI & DGFT IEC", value: "[Central accreditations on file]" },
 ];
 
+export const OFFICE_ADDRESS = {
+  // Real street address commented out for now:
+  // line1: "Plot No. 42, Commercial Sector 18",
+  // line2: "Udyog Vihar, Gurugram",
+  // postalCode: "122015",
+  line1: "Gurugram, Haryana",
+  line2: "National Capital Region (NCR)",
+  city: "Gurugram",
+  state: "Haryana",
+  postalCode: "",
+  country: "India",
+  phone: "+91 [On Request]",
+  email: "connect@trivenbio.com",
+  website: "https://trivenbio.com",
+};
+
 export const DISCLAIMER =
-  "Products are supplied in compliance with applicable regulations. Availability depends on licences and destination-market rules.";
+  "Products are supplied in strict compliance with applicable CDSCO, FSSAI, and DGFT regulations. Availability is subject to valid drug/trade licences and destination-market jurisdiction rules.";

@@ -5,9 +5,9 @@ import { StickyStack } from "@/components/sticky-stack";
 import { NextPage } from "@/components/next-page";
 
 export const metadata: Metadata = {
-  title: "What We Do",
+  title: "What We Do — Healthcare, FMCG & Trade Verticals",
   description:
-    "Distribution, exports, sourcing, consulting, private label and institutional B2B solutions — six verticals, one connected company.",
+    "Explore Triven Biomedicals' six commercial pillars: Healthcare Distribution, FMCG Supply, International Trade, Sourcing & Procurement, Market Consulting, and Private Label.",
 };
 
 export default function WhatWeDoPage() {

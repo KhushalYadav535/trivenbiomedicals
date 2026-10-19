@@ -8,9 +8,9 @@ import { ContactForm } from "@/components/contact-form";
 import Plexus from "@/components/plexus";
 
 export const metadata: Metadata = {
-  title: "Contact — Partner With Us",
+  title: "Contact Us — Partner With Triven Biomedicals",
   description:
-    "Let's work together. Tell us what you need to move, source or build.",
+    "Connect directly with our commercial, regulatory, and supply chain teams. Submit partnership, procurement, or trade inquiries with guaranteed confidentiality.",
 };
 
 export default function ContactPage() {

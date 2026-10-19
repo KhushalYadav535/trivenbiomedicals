@@ -7,9 +7,9 @@ import Orb from "@/components/orb";
 import { WHY_POINTS } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Why Triven",
+  title: "Why Triven — Compliance, Verified Networks & Execution",
   description:
-    "Compliance-first, verified suppliers, clear contracts, one connected partner and accountable execution.",
+    "Why leading institutions choose Triven Biomedicals: compliance-first operations, pre-verified supplier networks, clear contracts, and one accountable partner.",
 };
 
 export default function WhyTrivenPage() {

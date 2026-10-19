@@ -7,9 +7,9 @@ import { EXPORT_HOW, EXPORT_AREAS, EXPORT_CHECKS } from "@/lib/content";
 import { SpotlightCard } from "@/components/spotlight";
 
 export const metadata: Metadata = {
-  title: "Exports & International Trade",
+  title: "Exports & International Trade — Indian Healthcare & FMCG",
   description:
-    "Taking Indian products to qualified international buyers — export trading, facilitation and manufacturer representation.",
+    "Global export trading, overseas distributor representation, and compliant international supply facilitation for Indian pharmaceutical and commercial products.",
 };
 
 export default function ExportsPage() {

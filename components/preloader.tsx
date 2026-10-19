@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { EASE_EXPO } from "@/lib/motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -65,8 +66,33 @@ export default function Preloader() {
           exit={{ y: "-100%" }}
           transition={{ duration: 0.85, ease: EASE_EXPO }}
         >
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-ink/60">
-            Triven Biomedicals Pvt. Ltd.
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, ease: EASE_EXPO }}
+            className="relative mb-6 h-16 w-16 md:h-20 md:w-20"
+          >
+            <Image
+              src="/emblem-transparent.png"
+              alt="Triven Biomedicals"
+              width={80}
+              height={80}
+              className="h-full w-auto object-contain"
+              priority
+            />
+          </motion.div>
+          <div className="relative mb-2 flex h-7 w-auto items-center justify-center">
+            <Image
+              src="/triven-wordmark.png"
+              alt="TRIVEN"
+              width={170}
+              height={28}
+              className="h-full w-auto object-contain"
+              priority
+            />
+          </div>
+          <p className="font-mono text-[9.5px] uppercase tracking-[0.32em] text-ink/60">
+            Biomedicals Pvt. Ltd.
           </p>
           <p className="mt-4 font-display text-[clamp(5rem,18vw,13rem)] leading-none tabular-nums">
             {count}

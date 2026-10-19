@@ -6,9 +6,9 @@ import { NextPage } from "@/components/next-page";
 import { FMCG_CATEGORIES } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Food, FMCG & Institutional Supply",
+  title: "Food, FMCG & Institutional Supply — Triven Biomedicals",
   description:
-    "Consistent supply for hospitality, catering and corporate buyers — multi-category, recurring contracts and vendor consolidation.",
+    "Consistent multi-category supply of packaged foods, ingredients, personal care, and institutional catering products for hospitals and corporate enterprises.",
 };
 
 export default function FmcgPage() {

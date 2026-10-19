@@ -6,9 +6,9 @@ import { NextPage } from "@/components/next-page";
 import { HEALTHCARE_CATEGORIES, HEALTHCARE_WHY } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Healthcare Distribution",
+  title: "Healthcare & Pharma Distribution — Triven Biomedicals",
   description:
-    "Dependable healthcare supply for hospitals, pharmacies and institutions — compliance-first sourcing and repeat-order supply.",
+    "Licensed distribution of pharmaceuticals, hospital consumables, diagnostic devices, and clinical supplies with compliance-first repeat fulfillment across India.",
 };
 
 export default function HealthcarePage() {

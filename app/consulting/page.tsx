@@ -6,9 +6,9 @@ import { NextPage } from "@/components/next-page";
 import { CONSULTING_SERVICES, CONSULTING_MODELS } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Consulting & Market Access",
+  title: "Consulting & Market Access — Distribution Strategy India",
   description:
-    "Enter new markets with a clear plan — market-entry strategy, distributor development and export readiness.",
+    "Commercial market-entry advisory, authorized distributor identification, margin structuring, and export-readiness support for healthcare and FMCG brands.",
 };
 
 export default function ConsultingPage() {
