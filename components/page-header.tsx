@@ -1,4 +1,4 @@
-import { RevealChars, FadeUp } from "./reveal";
+import { RevealChars } from "./reveal";
 
 export function PageHeader({
   index,
@@ -15,7 +15,7 @@ export function PageHeader({
 }) {
   return (
     <header
-      className={`relative overflow-hidden border-b border-ink/10 bg-paper text-ink px-6 pb-20 pt-36 md:px-10 md:pb-28 md:pt-48 ${className}`}
+      className={`wash relative overflow-hidden border-b border-ink/10 bg-paper text-ink px-6 pb-20 pt-36 md:px-10 md:pb-28 md:pt-48 ${className}`}
     >
       <span
         aria-hidden
@@ -29,16 +29,13 @@ export function PageHeader({
         delay={0.05}
         className="relative font-mono text-[10px] uppercase tracking-[0.26em] text-ink/60"
       />
-      <h1 className="relative mt-8 font-display text-[clamp(2.7rem,7vw,7rem)] leading-[0.95] tracking-[-0.01em] md:mt-10">
+      <h1 className="balance relative mt-8 font-display text-[clamp(2.7rem,7vw,7rem)] leading-[0.95] tracking-[-0.01em] md:mt-10">
         <RevealChars text={title} delay={0.12} stagger={0.012} />
       </h1>
       {lede ? (
-        <FadeUp
-          delay={0.3}
-          className="relative mt-10 max-w-2xl text-base leading-relaxed text-ink/70 md:text-lg"
-        >
-          <p>{lede}</p>
-        </FadeUp>
+        <p className="dropcap relative mt-10 max-w-2xl text-base leading-relaxed text-ink/70 md:text-lg">
+          {lede}
+        </p>
       ) : null}
     </header>
   );

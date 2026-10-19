@@ -11,7 +11,7 @@ export function StickyStack() {
             className="sticky"
             style={{ top: `${88 + i * 26}px` }}
           >
-            <article className="mb-10 min-h-[52vh] rounded-3xl border border-ink/10 bg-cream p-8 text-ink shadow-[0_-16px_50px_rgba(11,12,10,0.08)] md:p-14">
+            <article className="ticks relative mb-10 min-h-[52vh] rounded-3xl border border-ink/10 bg-cream p-8 text-ink shadow-lux md:p-14">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <span className="font-mono text-[11px] tracking-[0.24em] text-moss">
                   ( {item.n} )

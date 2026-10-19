@@ -1,31 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ShaderCanvas from "./shader-canvas";
 import { RevealChars, FadeUp } from "./reveal";
 import { OrbitBadge } from "./badge";
 import { Button } from "./ui";
+import { ISTClock } from "./clock";
 import { SUBLINE } from "@/lib/content";
-
-function ISTClock() {
-  const [time, setTime] = useState("");
-
-  useEffect(() => {
-    const format = () =>
-      setTime(
-        new Date().toLocaleTimeString("en-GB", {
-          timeZone: "Asia/Kolkata",
-          hour12: false,
-        })
-      );
-    format();
-    const id = setInterval(format, 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  return <span suppressHydrationWarning>{time}</span>;
-}
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -89,13 +71,36 @@ export default function Hero() {
               stagger={0.02}
               className="inline-block"
             />
-            <RevealChars
-              text="Reliably."
-              waitEvent="tb:loaded"
-              delay={0.14}
-              stagger={0.03}
-              className="inline-block italic text-moss"
-            />
+            <span className="relative inline-block">
+              <RevealChars
+                text="Reliably."
+                waitEvent="tb:loaded"
+                delay={0.14}
+                stagger={0.03}
+                className="inline-block italic text-moss"
+              />
+              <motion.svg
+                viewBox="0 0 200 12"
+                aria-hidden
+                className="absolute -bottom-1 left-0 h-3 w-[104%]"
+                initial="hidden"
+                animate="show"
+              >
+                <motion.path
+                  d="M3 9 C 55 2.5, 120 11.5, 197 4.5"
+                  fill="none"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  className="text-acid"
+                  stroke="currentColor"
+                  variants={{
+                    hidden: { pathLength: 0, opacity: 0 },
+                    show: { pathLength: 1, opacity: 1 },
+                  }}
+                  transition={{ duration: 0.9, delay: 1.4, ease: "easeOut" }}
+                />
+              </motion.svg>
+            </span>
           </span>
         </h1>
 

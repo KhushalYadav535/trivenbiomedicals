@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-cream px-6 py-24 text-ink md:px-10 md:py-36">
+      <section className="wash relative bg-cream px-6 py-24 text-ink md:px-10 md:py-36">
         <div className="mx-auto max-w-screen-xl">
           <SectionHead label="02 — The idea" note="Connected by design" />
           <div className="mt-16">

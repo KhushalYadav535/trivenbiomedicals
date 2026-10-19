@@ -16,7 +16,7 @@ export function SpotlightCard({
   return (
     <div
       ref={ref}
-      className={`spotlight rounded-2xl ${className}`}
+      className={`spotlight ticks rounded-2xl ${className}`}
       style={
         {
           "--spot-color": dark

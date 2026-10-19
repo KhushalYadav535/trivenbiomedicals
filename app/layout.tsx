@@ -46,6 +46,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Cursor />
           <ScrollProgress />
           <div aria-hidden className="noise pointer-events-none fixed inset-0 z-[70] opacity-[0.04]" />
+          <div
+            aria-hidden
+            className="pointer-events-none fixed inset-0 z-[45] hidden lg:block"
+          >
+            {["25%", "50%", "75%"].map((pos) => (
+              <span
+                key={pos}
+                className="absolute top-0 h-full w-px bg-ink/[0.05]"
+                style={{ left: pos }}
+              />
+            ))}
+          </div>
           <Nav />
           <main>{children}</main>
           <Footer />

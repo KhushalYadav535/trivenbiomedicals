@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Magnetic } from "./magnetic";
 import { ArrowUpRight } from "./ui";
+import { ISTClock } from "./clock";
 import { NAV_LINKS, VERTICALS, COMPANY, DISCLAIMER } from "@/lib/content";
 
 const QUICK = NAV_LINKS.slice(1, 6);
@@ -14,7 +15,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-ink/10 bg-cream px-6 pt-20 text-ink md:px-10">
+    <footer className="wash relative border-t border-ink/10 bg-cream px-6 pt-20 text-ink md:px-10">
       <div className="mx-auto grid max-w-screen-xl gap-14 md:grid-cols-12">
         <div className="md:col-span-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.26em] text-ink/50">
@@ -105,9 +106,18 @@ export default function Footer() {
             <ArrowUpRight className="h-4 w-4 -rotate-90 transition-transform duration-300 group-hover:-translate-y-0.5" />
           </button>
         </div>
-        <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-ink/40">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink/40">
           © 2026 {COMPANY} · All rights reserved
         </p>
+        <span className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.22em] text-ink/50">
+          <span className="flex items-center gap-2 text-moss">
+            <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-moss" />
+            Open for partnerships
+          </span>
+          <span suppressHydrationWarning>
+            <ISTClock /> IST
+          </span>
+        </span>
       </div>
 
       <div aria-hidden data-cursor className="overflow-hidden px-1 pb-4">
